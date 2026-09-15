@@ -4,22 +4,23 @@
 
 A Windows voice controller for Codex using the FoloToy AI Passport (ESP32-C3).
 Board microphone → Wi-Fi PCM → Windows virtual microphone → Codex native dictation.
-Firmware is based on FoloToy AI Passport, under the included MIT license.
 
 <p align="center">
   <img src="assets/code-cursor-screen.jpg" alt="Code Cursor: Let's talk." width="240">
 </p>
 
-Code Cursor — “Let’s talk.” idle interface preview (HTML screenshot).
+*Idle interface preview*
 
 ## Controls
-- Tap OK: send. Double-tap OK: interrupt (two Escape presses).
+
+- Tap OK: send. Double-tap OK: interrupt.
 - Hold OK for 0.45 seconds: dictate; release to finish. Maximum recording: 30 seconds.
 - Tap UP/DOWN: cycle recent chats on release (Ctrl+F7 / Ctrl+F8).
 - Hold UP/DOWN: mouse wheel scrolling; release to stop. Keep the pointer over the reply.
-- Input is active only while Codex is foreground. The screen uses the monochrome Code Cursor design.
+- Input is active only while Codex is foreground.
 
 ## Setup
+
 1. Install Python on Windows and run `pip install -r requirements.txt`.
 2. Provide a Steam Streaming Microphone virtual audio device. Set BOTH playback and recording endpoints to mono, 48000 Hz, 16-bit. Select its recording endpoint in Codex.
 3. Configure Codex hold-to-dictate as Ctrl+Shift+D and recent-chat cycling as Ctrl+F7 / Ctrl+F8. These bindings depend on the installed Codex version.
@@ -28,14 +29,9 @@ Code Cursor — “Let’s talk.” idle interface preview (HTML screenshot).
 6. With ESP-IDF 5.5.3 active, build using `idf.py -C ai-passport-main build`. Confirm the exact device before flashing. For the existing preserved-partition installation, flash ONLY the application at 0x10000; do not overwrite factory device data.
 7. Allow Python TCP port 8765 from your trusted LAN. Run `python passport_wifi_bridge.py`. Keep a fixed PC LAN address.
 
-The project does not install virtual audio drivers, configure Codex bindings or create startup entries automatically. Original machine backups and credentials are intentionally excluded. Generated firmware embeds credentials and must not be published.
+Configure the virtual audio device and shortcuts manually. Built firmware contains your Wi-Fi password and pairing key; do not share it.
 
-## Verification and limits
-`python passport_wifi_test.py` tests authentication, ordered audio completion, double-tap feedback and navigation timing.
-Build passed with ESP-IDF 5.5.3; the application was flashed and reconnected on the development device. Latest scrolling behavior still needs user acceptance on the actual Codex window.
-HMAC authenticates pairing; LAN PCM is not encrypted with TLS. Ordinary audio is not saved by the bridge; Codex handles its own recording retention.
+## Notes
+
+Use a trusted LAN: audio transport is unencrypted. The bridge does not save ordinary recordings; Codex handles its own recording retention.
 “Audio sent to Codex” is a timed acknowledgement, not confirmation that transcription has completed.
-
-## Previews
-Run `python -m http.server 8893 --bind 127.0.0.1 --directory passport-designs`.
-Open http://127.0.0.1:8893/ for the final Code Cursor interface and its simulated states.
