@@ -6,6 +6,12 @@ A Windows voice controller for Codex using the FoloToy AI Passport (ESP32-C3).
 Board microphone → Wi-Fi PCM → Windows virtual microphone → Codex native dictation.
 Firmware is based on FoloToy AI Passport, under the included MIT license.
 
+<p align="center">
+  <img src="assets/code-cursor-lets-talk.png" alt="Code Cursor: Let's talk." width="280">
+</p>
+
+Code Cursor — “Let’s talk.” idle interface preview (HTML screenshot).
+
 ## Controls
 - Tap OK: send. Double-tap OK: interrupt (two Escape presses).
 - Hold OK for 0.45 seconds: dictate; release to finish. Maximum recording: 30 seconds.

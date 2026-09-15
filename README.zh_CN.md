@@ -4,6 +4,12 @@
 
 使用 FoloToy AI Passport（ESP32-C3）内置麦克风，经 Wi-Fi 将声音送入 Windows 虚拟麦克风，由 Codex 原生听写转文字。固件基于 FoloToy 项目，保留 MIT 许可证。
 
+<p align="center">
+  <img src="assets/code-cursor-lets-talk.png" alt="Code Cursor: Let's talk." width="280">
+</p>
+
+Code Cursor — “Let’s talk.” 待机界面预览（HTML 截图）。
+
 ## 操作
 - 单击 OK 发送；双击 OK 打断（两次 Escape）。
 - 长按 OK 0.45 秒听写，松开结束，最长 30 秒。
