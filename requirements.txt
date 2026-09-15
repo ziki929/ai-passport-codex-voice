@@ -1,0 +1,7 @@
+numpy
+scipy
+sounddevice
+pyserial
+pywin32
+psutil
+pycaw

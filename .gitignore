@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.log
+*.wav
+*.bin
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+passport-backup/
+passport-previous-microphone.json
+passport_wifi_config.h
+.env
