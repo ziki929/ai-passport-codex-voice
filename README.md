@@ -22,7 +22,7 @@ Board microphone → Wi-Fi PCM → Windows virtual microphone → Codex native d
 ## Setup
 
 1. Install Python on Windows and run `pip install -r requirements.txt`.
-2. Provide a Steam Streaming Microphone virtual audio device. Set BOTH playback and recording endpoints to mono, 48000 Hz, 16-bit. Select its recording endpoint in Codex.
+2. Provide a Steam Streaming Microphone virtual audio device. Set BOTH playback and recording endpoints to mono, 48000 Hz, 16-bit. Select its recording endpoint in Codex. (Other virtual audio devices can be used instead, but you must also update the audio device names in the bridge code and ensure the playback and recording formats match.)
 3. Configure Codex hold-to-dictate as Ctrl+Shift+D and recent-chat cycling as Ctrl+F7 / Ctrl+F8. These bindings depend on the installed Codex version.
 4. Copy `wifi-host.example.json` to `passport-backup/wifi-host.json`. Use the PC LAN IPv4 address and a random shared key (`python -c "import secrets; print(secrets.token_hex(32))"`).
 5. Copy `ai-passport-main/main/passport_wifi_config.example.h` to `passport_wifi_config.h` in the same directory. Fill in 2.4 GHz Wi-Fi credentials, the same host address and shared key.
