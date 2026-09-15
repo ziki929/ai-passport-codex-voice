@@ -32,4 +32,4 @@ HMAC authenticates pairing; LAN PCM is not encrypted with TLS. Ordinary audio is
 
 ## Previews
 Run `python -m http.server 8893 --bind 127.0.0.1 --directory passport-designs`.
-Open http://127.0.0.1:8893/ for the six Codex concepts; `claude.html` contains the earlier concepts.
+Open http://127.0.0.1:8893/ for the final Code Cursor interface and its simulated states.

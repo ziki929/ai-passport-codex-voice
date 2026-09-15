@@ -29,4 +29,4 @@ ESP-IDF 5.5.3 编译已通过，开发设备烧录后已重新连接。最新滚
 “Audio sent to Codex” 是定时提示，不代表转写已完成。
 
 ## 界面预览
-执行 `python -m http.server 8893 --bind 127.0.0.1 --directory passport-designs`，打开 http://127.0.0.1:8893/ 查看六款 Codex 方案；`claude.html` 为之前的方案。
+执行 `python -m http.server 8893 --bind 127.0.0.1 --directory passport-designs`，打开 http://127.0.0.1:8893/ 查看最终采用的 Code Cursor 界面和状态预览。
