@@ -7,7 +7,7 @@ Board microphone → Wi-Fi PCM → Windows virtual microphone → Codex native d
 Firmware is based on FoloToy AI Passport, under the included MIT license.
 
 <p align="center">
-  <img src="assets/code-cursor-lets-talk.png" alt="Code Cursor: Let's talk." width="280">
+  <img src="assets/code-cursor-screen.jpg" alt="Code Cursor: Let's talk." width="240">
 </p>
 
 Code Cursor — “Let’s talk.” idle interface preview (HTML screenshot).
