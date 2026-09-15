@@ -21,7 +21,7 @@
 ## 配置
 
 1. Windows 安装 Python，执行 `pip install -r requirements.txt`。
-2. 准备 Steam Streaming Microphone 虚拟音频设备，播放和录音端均设为单声道、48000 Hz、16 位。Codex 选择其录音端。
+2. 准备 Steam Streaming Microphone 虚拟音频设备，播放和录音端均设为单声道、48000 Hz、16 位。Codex 选择其录音端。（也可使用其他虚拟声卡替代，但需同步修改桥接程序中的音频设备名称，并确保播放端与录音端格式一致。）
 3. Codex 按住听写设置为 Ctrl+Shift+D，最近聊天切换设为 Ctrl+F7 / Ctrl+F8；具体设置依赖应用版本。
 4. 将 `wifi-host.example.json` 复制到 `passport-backup/wifi-host.json`，填写电脑局域网 IPv4 和随机配对密钥，可用 `python -c "import secrets; print(secrets.token_hex(32))"` 生成。
 5. 将 `ai-passport-main/main/passport_wifi_config.example.h` 复制到同目录的 `passport_wifi_config.h`，填写 2.4 GHz Wi-Fi、相同的电脑地址与密钥。
